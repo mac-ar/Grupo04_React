@@ -1,0 +1,32 @@
+table {       
+    width: 100%;
+    border-collapse: collapse;
+    /* border: 1px solid      */
+}
+
+tr {    
+    text-align: center;   
+}
+
+th{    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    height: 60px; 
+    text-align: center;   
+}
+
+td{    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:medium;
+    height: 80px;
+    /* text-align: center; */
+}
+
+th, td{
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+}
