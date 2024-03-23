@@ -1,6 +1,7 @@
 import React from "react";
 import { CategoriasTarjeta } from "./CategoriasTarjeta";
 import { useEffect, useState, useRef } from "react";
+import { CategoriaCard1 } from "./CategoriaCard1";
 
 export function CategoriasInDb() {
 
@@ -18,59 +19,13 @@ export function CategoriasInDb() {
                 setCategoria(data.data);
                 console.log(data.produ1);
                 setProducto1(data.produ1);
-            })
-            /* .then((data) => {
-                console.log(data.produ1);
-                setProducto1(data.produ1);
-            })
-            .then((data) => {
-                console.log(data.produ2);
                 setProducto2(data.produ2);
-            })
-            .then((data) => {
-                console.log(data.produ3);
                 setProducto3(data.produ3);
-            }) */
-            .catch((error) => console.error(error));
-    }, []);
-
-    /*  useEffect(() => {
-         fetch("http://localhost:3000/api/product/show")
-             .then((res) => res.json())
-             .then((data) => {
-                // console.log(data.produ1);
-                 setProducto1(data.produ1);
-             })
-             .then((data) => {
-                 console.log(data.produ2);
-                 setProducto1(data.produ2);
-             })
-             .then((data) => {
-                 console.log(data.produ3);
-                 setProducto1(data.produ3);
-             })
-             .catch((error) => console.error(error));
-     }, []);
-  */
-    /* useEffect(() => {
-        fetch("http://localhost:3000/api/product/show")
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data.produ2);
-                setProducto2(data.produ2);
             })
             .catch((error) => console.error(error));
     }, []);
 
-    useEffect(() => {
-        fetch("http://localhost:3000/api/product/show")
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data.produ3);
-                setCategoria(data.produ3);
-            })
-            .catch((error) => console.error(error));
-    }, []); */
+
 
     let colors = ['primary', 'warning', 'success'];
     let icons = ['fa-regular fa-square-plus', 'fa-solid fa-briefcase', 'fa-solid fa-recycle'];
@@ -81,10 +36,17 @@ export function CategoriasInDb() {
         <>
             <div className="row">
                 {categoria.map((cate, i) => {
-                    return <CategoriasTarjeta {...cate} key={i} color={colors[i]} icon={icons[i]} catego={cates[i]} productos={productoEnvio[i]} />;
+                    return <CategoriasTarjeta {...cate} key={i} color={colors[i]} icon={icons[i]} catego={cates[i]} />;
                 })}
             </div>
-            <div>
+            <hr />
+            <div className="row">
+                {categoria.map((cate, i) => {
+                    return <CategoriaCard1 {...cate} key={i} color={colors[i]} catego={cates[i]} icon={icons[i]} productos={productoEnvio[i]} />;
+                })}
+            </div>
+
+            {/* <div>
                 <h2>Categoria Nuevo</h2>
                 <table>
                     <thead>
@@ -107,7 +69,7 @@ export function CategoriasInDb() {
                         }
                     </tbody>
                 </table>
-            </div>
+            </div> */}
         </>
     )
 }

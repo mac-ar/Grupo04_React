@@ -8,12 +8,12 @@ export function ContentRowCenter() {
     return (
         <div className="row">
 
-            {/*<!-- Last Movie in DB -->*/}
-            {/* <LastMovieInDb /> */}
+            {/*<!-- ULtimo Producto in DB -->*/}
+
             <UltimoProducto />
             {/*<!-- End content row last movie in Data Base -->*/}
 
-            {/*<!-- Genres in DB -->*/}
+            {/*<!-- ULtimo Usuario in DB -->*/}
             <UltimoUsuario />
             {/* <UsuariosInDb /> */}
 

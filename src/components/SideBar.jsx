@@ -15,7 +15,7 @@ export function SideBar() {
         {/*<!-- Sidebar - Brand -->*/}
         <a
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="http://localhost:3000/"
+          href="http://localhost:3000/" target="_blank"
         >
           <div className="sidebar-brand-icon">
             <img src={image} alt="Digital House" width="150" />
