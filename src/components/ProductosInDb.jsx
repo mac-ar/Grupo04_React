@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState, useRef } from "react";
+import foto from "../assets/Carolina.jpg"
 import "./ProductosInDb.css";
 
 export function ProductosInDb() {
@@ -23,6 +24,7 @@ export function ProductosInDb() {
             <table>
                 <tr>
                     <th>Orden</th>
+                    <th>Imagen</th>
                     <th>Producto</th>
                     <th>Descripcion</th>
                 </tr>
@@ -33,6 +35,12 @@ export function ProductosInDb() {
                         return (
                             <tr key={i}>
                                 <td>{prod.id}</td>
+                                <td> <img
+                                    className="img-profile rounded-circle"
+                                    src={prod.img}
+                                    alt="Not Found"
+                                    width="100"
+                                /></td>
                                 <td>{prod.nombre}</td>
                                 <td>{prod.descripcion}</td>
                             </tr>

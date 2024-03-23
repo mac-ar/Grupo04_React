@@ -5,7 +5,7 @@ const URL_SERVER = "http://localhost:3000"
 
 export function SearchProducto() {	
 
-	const [keyword, setKeyword] = useState('d')
+	const [keyword, setKeyword] = useState('')
 	const [producto, setProducto] = useState([]);	
 
 	const handleChange = (e) => {		

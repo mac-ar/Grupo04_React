@@ -1,15 +1,6 @@
 import React from "react";
-import image from "../assets/Electro/LogoEHV.png";
-import {ContentWrapper} from './ContentWrapper';
-import {GenresInDb} from './GenresInDb';
-import {LastMovieInDb} from './LastMovieInDb';
-import {ContentRowCards} from './ContentRowCards';
-import {NotFound} from './NotFound';
-import {SearchMovies} from "./SearchMovies";
-import {ProductosInDb} from "./ProductosInDb";
+import image from "../assets/Electro/LogoEHV_2.png";
 import { Link, Routes, Route } from "react-router-dom";
-import { CategoriasInDb } from "./CategoriasInDb";
-import { UltimoProducto } from "./UltimoProducto";
 
 
 export function SideBar() {
@@ -17,21 +8,23 @@ export function SideBar() {
     <React.Fragment>
       {/*<!-- Sidebar -->*/}
       <ul
-        className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
+        className="navbar-nav bg-info sidebar sidebar-dark accordion"
         id="accordionSidebar"
+
       >
         {/*<!-- Sidebar - Brand -->*/}
         <a
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/"
+          href="http://localhost:3000/"
         >
           <div className="sidebar-brand-icon">
-            <img className="w-50" src={image} alt="Digital House" />
+            <img src={image} alt="Digital House" width="150" />
+            {/* <span>ElectroHouse</span> */}
           </div>
         </a>
 
         {/*<!-- Divider -->*/}
-        <hr className="sidebar-divider my-0" />
+        <hr className="sidebar-divider my-1" />
 
         {/*<!-- Nav Item - Dashboard -->*/}
         <li className="nav-item active">
@@ -48,26 +41,19 @@ export function SideBar() {
         <div className="sidebar-heading">Menu - App</div>
 
         {/*<!-- Nav Item - Charts -->*/}
-        {/* <li className="nav-item">
-          <Link className="nav-link" to="/allGenres">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Géneros</span>
-          </Link>
-        </li> */}
 
         {/*<!-- Listado de Usuarios -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/usuarios">
-            <i className="fas fa-fw fa-chart-area"></i>
+            <i className="fas fa-solid fa-users"></i>
             <span>Listado Usuarios</span>
           </Link>
         </li>
 
-
         {/* Link ProductosInDb*/}
         <li className="nav-item">
           <Link className="nav-link" to="/Productos">
-            <i className="fas fa-fw fa-chart-area"></i>
+            <i className="fas fa-solid fa-cart-shopping"></i>
             <span>Listado de Productos</span>
           </Link>
         </li>
@@ -75,7 +61,7 @@ export function SideBar() {
         {/*<!-- Ultimo Producto -->*/}
         <li className="nav-item">
           <Link className="nav-link collapsed" to="/UltProducto">
-            <i className="fas fa-fw fa-folder"></i>
+            <i className="fas fa-solid fa-list-check"></i>
             <span>Ultimo Producto Cargado</span>
           </Link>
         </li>
@@ -83,19 +69,20 @@ export function SideBar() {
         {/*<!-- Ultimo Usuario -->*/}
         <li className="nav-item">
           <Link className="nav-link collapsed" to="/UltUsuario">
-            <i className="fas fa-fw fa-folder"></i>
+            <i className="fas fa-solid fa-user"></i>
             <span>Ultimo Usuario Cargado</span>
           </Link>
         </li>
 
-        {/*<!-- Nav Item - Tables -->*/}
+        {/*<!-- Categorias -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/Categorias">
-            <i className="fas fa-fw fa-table"></i>
+            <i className="fas fa-duotone fa-layer-group"></i>
             <span>Categorias</span>
           </Link>
         </li>
-        {/*<!-- Nav Item - Tables -->*/}
+
+        {/*<!-- Buscar Productos -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/SearchProducto">
             <i className="fas fa-fw fa-table"></i>
@@ -103,19 +90,11 @@ export function SideBar() {
           </Link>
         </li>
 
-        {/*<!-- Nav Item - Tables -->*/}
-        {/* <li className="nav-item">
-          <Link className="nav-link" to="/404">
-            <i className="fas fa-fw fa-question"></i>
-            <span>404</span>
-          </Link>
-        </li> */}
-
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider d-none d-md-block" />
       </ul>
       {/*<!-- End of Sidebar -->*/}
-      
+
     </React.Fragment>
   );
 }

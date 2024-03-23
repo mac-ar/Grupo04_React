@@ -11,7 +11,7 @@ export function UsuariosInDb() {
     useEffect(() => {
         fetch(`${URL_SERVER}/api/users`)
             .then((res) => res.json())
-            .then((data) => {                
+            .then((data) => {
                 setUsuario(data.data);
             })
             .catch((error) => console.error(error));
@@ -21,29 +21,30 @@ export function UsuariosInDb() {
         <>
             <div><h1>Listado de Usuarios</h1></div>
             <table>
-
                 <tr>
                     <th>Orden</th>
+                    <th>Avatar</th>
                     <th>Nombre Completo</th>
                     <th>Email</th>
                 </tr>
-
-
                 {/* Listado de películas */}
                 {
                     usuario?.length > 0 && usuario.map((usu, i) => {
                         return (
                             <tr key={i}>
                                 <td>{usu.id}</td>
+                                <td> <img
+                                    className="img-profile rounded-circle"
+                                    src={usu.img}
+                                    alt="Not Found"
+                                    width="100"
+                                /></td>
                                 <td>{usu.nombre}  {usu.apellido}</td>
                                 <td>{usu.email}</td>
                             </tr>
                         )
                     })
                 }
-
-
-
             </table>
 
         </>

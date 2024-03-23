@@ -5,7 +5,7 @@ export function TopBar() {
   return (
     <React.Fragment>
       {/*<!-- Topbar -->*/}
-      <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+      <nav className="navbar navbar-expand navbar-light sticky-top bg-info topbar mb-4 static-top shadow ">
         {/*<!-- Sidebar Toggle (Topbar) -->*/}
         <button
           id="sidebarToggleTop"
@@ -47,7 +47,7 @@ export function TopBar() {
           {/*<!-- Nav Item - User Information -->*/}
           <li className="nav-item dropdown no-arrow">
             <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-              <span className="mr-2 d-none d-lg-inline text-gray-600 small">
+              <span className="mr-2 d-none d-lg-inline text-gray-900 small">
                 Carolina P.
               </span>
               <img
