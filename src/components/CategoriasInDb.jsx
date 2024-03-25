@@ -46,30 +46,7 @@ export function CategoriasInDb() {
                 })}
             </div>
 
-            {/* <div>
-                <h2>Categoria Nuevo</h2>
-                <table>
-                    <thead>
-                        <th>Orden</th>
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                    </thead>
-                    <hr />
-                    <tbody>
-                        {
-                            producto1?.length > 0 && producto1.map((usu, i) => {
-                                return (
-                                    <tr key={i}>
-                                        <td>{usu.id}</td>
-                                        <td>{usu.nombre} </td>
-                                        <td>{usu.descripcion}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table>
-            </div> */}
+
         </>
     )
 }
