@@ -37,18 +37,10 @@ export function SideBar() {
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider" />
 
-        {/*<!-- Heading -->*/}
-        <div className="sidebar-heading">Menu - App</div>
+        {/*<!-- Heading -->
+        <div className="sidebar-heading">Menu - App</div>*/}
 
         {/*<!-- Nav Item - Charts -->*/}
-
-        {/*<!-- Listado de Usuarios -->*/}
-        <li className="nav-item">
-          <Link className="nav-link" to="/usuarios">
-            <i className="fas fa-solid fa-users"></i>
-            <span>Listado Usuarios</span>
-          </Link>
-        </li>
 
         {/* Link ProductosInDb*/}
         <li className="nav-item">
@@ -58,6 +50,14 @@ export function SideBar() {
           </Link>
         </li>
 
+        {/*<!-- Listado de Usuarios -->*/}
+        <li className="nav-item">
+          <Link className="nav-link" to="/usuarios">
+            <i className="fas fa-solid fa-users"></i>
+            <span>Listado Usuarios</span>
+          </Link>
+        </li>
+        
         {/*<!-- Ultimo Producto -->*/}
         <li className="nav-item">
           <Link className="nav-link collapsed" to="/UltProducto">
@@ -82,11 +82,27 @@ export function SideBar() {
           </Link>
         </li>
 
+        {/*<!-- Perfiles -->*/}
+        <li className="nav-item">
+          <Link className="nav-link" to="/Perfiles">
+            <i className="fa-solid fa-database"></i>
+            <span>Perfiles</span>
+          </Link>
+        </li>
+        
         {/*<!-- Buscar Productos -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/SearchProducto">
             <i className="fas fa-fw fa-table"></i>
             <span>Buscar Produtos</span>
+          </Link>
+        </li>
+
+        {/*<!-- Buscar Usuarios -->*/}
+        <li className="nav-item">
+          <Link className="nav-link" to="/SearchUsuario">
+            <i className="fas fa-fw fa-table"></i>
+            <span>Buscar Usuarios</span>
           </Link>
         </li>
 

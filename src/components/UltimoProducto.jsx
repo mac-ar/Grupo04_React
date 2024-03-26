@@ -35,10 +35,17 @@ useEffect(() => {
               alt=" Imagen Ultimo Producto "
             />
           </div>
+          <p><strong>Producto</strong></p>
+          <p>
+           {ultProducto.nombre}
+          </p>
+          <br/>
+          <p><strong>Descripcion</strong></p>
           <p>
            {ultProducto.descripcion}
           </p>
           <br/>
+          <p><strong>Especificaciones Tecnicas</strong></p>
           <p>
             {ultProducto.especificaciones}
           </p>

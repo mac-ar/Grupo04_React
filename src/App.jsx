@@ -9,13 +9,16 @@ import { Footer } from "./components/Footer";
 import { NotFound } from "./components/NotFound";
 import { Route, Routes } from "react-router";
 import { CategoriasInDb } from "./components/CategoriasInDb";
-
-import "./App.css";
 import { ProductosInDb } from "./components/ProductosInDb";
 import { UltimoProducto } from "./components/UltimoProducto";
 import { UltimoUsuario } from "./components/UltimoUsuario";
 import {SearchProducto} from "./components/SearchProducto";
-import {UsuariosInDb} from "./components/UsuariosInDb"
+import {SearchUsuario} from "./components/SearchUsuario";
+import {UsuariosInDb} from "./components/UsuariosInDb";
+
+import { PerfilesinDb } from "./components/PerfilesinDb";
+
+import "./App.css";
 
 
 export function App() {
@@ -36,7 +39,9 @@ export function App() {
               <Route path="/UltUsuario" element={<UltimoUsuario />} />
               <Route path="/allMovies" element={<ContentRowCards />} />
               <Route path="/Categorias" element={<CategoriasInDb />} />
+              <Route path="/Perfiles" element={<PerfilesinDb />} />
               <Route path="/SearchProducto" element={<SearchProducto />} />
+              <Route path="/SearchUsuario" element={<SearchUsuario />} />
               <Route path="*" element={<NotFound />} />
             </Routes> 
             <Footer />            

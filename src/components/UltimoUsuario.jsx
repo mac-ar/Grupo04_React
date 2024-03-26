@@ -37,15 +37,17 @@ useEffect(() => {
           </div>
           <p>
             <strong>
-           {ultUsuario.nombre} {ultUsuario.apellido}
+           Nombre:
            </strong>
           </p>
+          <p>{ultUsuario.nombre} {ultUsuario.apellido}</p>
           <br/>
           <p>
           <strong>
-            {ultUsuario.email}
-            </strong>
+            Email:
+          </strong>
           </p>
+          <p>{ultUsuario.email}</p>
           {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">
             View movie detail
           </a> */}
